@@ -1,5 +1,12 @@
 import React from "react";
 
-const Home = () => <div className="">ADMIN PAGE</div>;
+// components
+import Header from "../../components/Header/AdminPageHeader";
 
-export default Home;
+const Admin = () => (
+  <div className="">
+    <Header />
+  </div>
+);
+
+export default Admin;

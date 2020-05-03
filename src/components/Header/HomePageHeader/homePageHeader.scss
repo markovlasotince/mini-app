@@ -1,0 +1,22 @@
+.header-wrapper {
+  min-height: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: lightgrey;
+  padding: 10px;
+  .logo {
+    padding-left: 3%;
+  }
+  .login-button-wrapper {
+    padding-right: 3%;
+    a {
+      background-color: gray;
+      padding: 10px;
+      border-radius: 10px;
+      text-decoration: none;
+      color: white;
+      text-transform: uppercase;
+    }
+  }
+}
