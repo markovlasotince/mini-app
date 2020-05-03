@@ -1,24 +1,48 @@
 import React from "react";
-import { useDispatch } from "react-redux";
+import { connect } from "react-redux";
+import { hot } from "react-hot-loader";
+import PropTypes from "prop-types";
 
 // components
+import ModalWindow from "../../components/ModalWindow";
 
 // actions
-import { loginUserAction } from "../../store/actions/auth";
+import { showModal, hideModal } from "../../store/actions/modal";
 
-const Login = () => {
-  const dispatch = useDispatch();
-
-  const handleLogin = () => {
-    dispatch(loginUserAction("admin", "admin"));
+const Login = ({ showModal, hideModal }) => {
+  const setProps = (name) => {
+    showModal(name);
   };
 
   return (
-    <div className="">
-      <h1>Login PAGE</h1>
-      <button onClick={handleLogin}>Click here to login</button>
+    <div className="login-page-wrapper">
+      <button
+        className="single-image button-base-styles"
+        onClick={() => setProps("Please, enter your username and password")}
+        type="button"
+      >
+        Login here
+      </button>
+      <ModalWindow closeModal={hideModal}>
+        <h1>This should be form</h1>
+      </ModalWindow>
     </div>
   );
 };
 
-export default Login;
+const mapDispatchToProps = (dispatch) => ({
+  showModal: (name) => dispatch(showModal(name)),
+  hideModal: () => dispatch(hideModal("HIDE_MODAL", false)),
+});
+
+Login.propTypes = {
+  showModal: PropTypes.func,
+  hideModal: PropTypes.func,
+};
+
+Login.defaultProps = {
+  showModal: () => {},
+  hideModal: () => {},
+};
+
+export default hot(module)(connect(null, mapDispatchToProps)(Login));

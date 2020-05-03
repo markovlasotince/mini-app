@@ -1,0 +1,63 @@
+// @import '../../styles/colors';
+
+.modal-window-wrapper {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10000;
+  background-color: lightgray;
+  transform: scale(0.5);
+  opacity: 0;
+  transition: all 0.4s ease-in-out;
+  z-index: 999999999;
+  width: 50%;
+  height: 60%;
+  margin: auto;
+}
+
+.modal-window-header {
+  display: flex;
+  height: 7.5em;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  padding: 2em 3em;
+  box-shadow: 0em 0em 2em 0em rgba(0, 0, 0, 0.2);
+  flex: 1;
+}
+
+.header-icon {
+  outline: none;
+  width: 2.4em;
+  height: 2.4em;
+  color: black;
+}
+
+.header-title {
+  font-family: Roboto;
+  font-size: 2.2em;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  letter-spacing: normal;
+  color: black;
+}
+
+.modal-window-content {
+  display: flex;
+  flex-direction: column;
+  height: calc(100% - 7.5em);
+  overflow-x: hidden;
+  overflow-y: auto;
+  background: transparent;
+  padding: 2em;
+}
+
+.show-up-animation {
+  transform: scale(1);
+  opacity: 1;
+}
