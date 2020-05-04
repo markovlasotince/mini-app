@@ -21,11 +21,11 @@ const ModalWindow = ({ isOpen, title, children, closeModal }) => {
       <div className="modal-window-wrapper">
         <div className="modal-window-header">
           <span className="header-title">{title}</span>
-          <input
-            type="image"
+          <img
             className="header-icon"
             onClick={closeModal}
             src={icon}
+            alt="close-button"
           />
         </div>
         <div className="modal-window-content">{children}</div>

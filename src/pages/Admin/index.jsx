@@ -17,11 +17,17 @@ const Admin = () => {
 
   useEffect(() => {
     dispatch(getPostsAction());
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-
+  
   const renderPosts = () =>
     posts.map((post) => (
-      <PostItem id={post.id} title={post.title} body={post.body} />
+      <PostItem
+        id={post.id}
+        title={post.title}
+        body={post.body}
+        key={post.id}
+      />
     ));
 
   return (
