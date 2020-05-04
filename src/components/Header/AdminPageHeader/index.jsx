@@ -11,6 +11,7 @@ import "./adminPageHeader.scss";
 
 // actions
 import { logoutUserAction } from "../../../store/actions/auth";
+import { Link } from "react-router-dom";
 
 const AdminPageHeader = () => {
   const [dropdownOpen, setOpen] = useState(false);
@@ -28,7 +29,9 @@ const AdminPageHeader = () => {
 
   return (
     <div className="header-wrapper">
-      <div className="logo">LOGO</div>
+      <div className="logo">
+        <Link to="/">LOGO</Link>
+      </div>
       <div className="settings-button-wrapper">
         <h5>Welcome, {username}</h5>
         <ButtonDropdown isOpen={dropdownOpen} toggle={toggle} direction="down">

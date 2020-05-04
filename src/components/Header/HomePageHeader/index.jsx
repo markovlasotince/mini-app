@@ -13,7 +13,7 @@ const HomePageHeader = () => {
         {!isAuthenticated ? (
           <Link to="/login">Login</Link>
         ) : (
-          <Link to="/admin">Go back to admin panel</Link>
+          <Link to="/admin">Admin</Link>
         )}
       </div>
     </div>

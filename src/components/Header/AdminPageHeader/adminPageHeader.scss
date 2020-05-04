@@ -7,6 +7,12 @@
   padding: 10px;
   .logo {
     padding-left: 3%;
+    a {
+      background-color: gray;
+      text-decoration: none;
+      color: white;
+      text-transform: uppercase;
+    }
   }
   .settings-button-wrapper {
     display: flex;

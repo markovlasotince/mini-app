@@ -44,7 +44,7 @@ const Admin = () => {
             <div className="posts-header">
               <h3>Here is a list of all available posts: </h3>
             </div>
-            <div className="posts">{posts != [] && renderPosts()}</div>
+            <div className="posts">{posts !== [] && renderPosts()}</div>
           </>
         )}
       </div>
