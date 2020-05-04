@@ -1,0 +1,24 @@
+.admin-page-wrapper {
+  .posts-wrapper {
+    .spinner-wraper {
+      padding-top: 20%;
+      margin: auto;
+      display: flex;
+      justify-content: center;
+    }
+    .posts-header {
+      margin: 50px 30px;
+    }
+    .posts {
+      width: 80%;
+      margin: auto;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      .post-item-wrapper {
+        margin: 2%;
+      }
+    }
+  }
+}
