@@ -19,9 +19,6 @@ const Admin = () => {
     dispatch(getPostsAction());
   }, []);
 
-  console.log("loading: ", loading);
-  console.log("posts: ", posts);
-
   const renderPosts = () =>
     posts.map((post) => (
       <PostItem id={post.id} title={post.title} body={post.body} />
