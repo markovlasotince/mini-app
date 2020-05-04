@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { connect } from "react-redux";
 import { hot } from "react-hot-loader";
 import PropTypes from "prop-types";
@@ -7,22 +7,29 @@ import PropTypes from "prop-types";
 import ModalWindow from "../../components/ModalWindow";
 import LoginForm from "../../components/Forms/LoginForm";
 
+import "./login.scss";
+
 // actions
 import { showModal, hideModal } from "../../store/actions/modal";
 
 const Login = ({ showModal, hideModal }) => {
+  const modalTitle = "Please, enter your username and password";
   const setProps = (name) => {
     showModal(name);
   };
 
+  useEffect(() => {
+    showModal(modalTitle);
+  });
+
   return (
     <div className="login-page-wrapper">
       <button
-        className="single-image button-base-styles"
-        onClick={() => setProps("Please, enter your username and password")}
+        className="login-button"
+        onClick={() => setProps(modalTitle)}
         type="button"
       >
-        Login here
+        Click here to login
       </button>
       <ModalWindow closeModal={hideModal}>
         <LoginForm />
