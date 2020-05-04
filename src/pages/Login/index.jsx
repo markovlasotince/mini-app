@@ -5,6 +5,7 @@ import PropTypes from "prop-types";
 
 // components
 import ModalWindow from "../../components/ModalWindow";
+import LoginForm from "../../components/Forms/LoginForm";
 
 // actions
 import { showModal, hideModal } from "../../store/actions/modal";
@@ -24,7 +25,7 @@ const Login = ({ showModal, hideModal }) => {
         Login here
       </button>
       <ModalWindow closeModal={hideModal}>
-        <h1>This should be form</h1>
+        <LoginForm />
       </ModalWindow>
     </div>
   );

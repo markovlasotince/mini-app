@@ -1,8 +1,6 @@
-/* eslint-disable no-use-before-define */
-// import axios from "axios";
-// import jwtDecode from "jwt-decode";
-
 import actionTypes from "../actionTypes";
+
+// also here needs to be logic for decoding JWT if we want to have user name/email/etc in admin panel
 
 export const loggedUser = () => ({
   type: actionTypes.LOGIN_USER,
@@ -39,8 +37,11 @@ export const logoutUserAction = () => (dispatch) => {
 };
 
 export const loginUserAction = (email, password) => (dispatch) => {
-  // API call and in then part this function is called
-  loginUserSuccessAction(dispatch, "tokentoken");
+  // API call and JWT return if valid credentials
+  // mocked api call xD 
+  if (email === "admin" && password === "admin") {
+    loginUserSuccessAction(dispatch, "admin");
+  }
 };
 
 export const refreshTokenAction = () => (dispatch) => {
